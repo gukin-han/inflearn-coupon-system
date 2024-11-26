@@ -46,8 +46,8 @@ class ApplyServiceTest {
             });
         }
         latch.await();
+        Thread.sleep(10_000);
         final long count = couponRepository.count();
         Assertions.assertThat(count).isEqualTo(100);
     }
-
 }
